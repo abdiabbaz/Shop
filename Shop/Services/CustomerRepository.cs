@@ -4,7 +4,7 @@ namespace Shop.Services
 {
 	public class CustomerRepository : RepositoryService<Customer>, ICustomerRepository
 	{
-		private List<Customer> _customers;
+		private List<Customer>? _customers;
 
 		public CustomerRepository() : base()
 		{
@@ -31,7 +31,5 @@ namespace Shop.Services
 				customer.Balance = balance;
 			}
 		}
-
-
 	}
 }

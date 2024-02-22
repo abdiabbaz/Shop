@@ -7,19 +7,18 @@ namespace Shop.Pages.Users
 {
     public class GetAllCustomersModel : PageModel
     {
-        private readonly ICustomerRepository _customerRepository;
+        private readonly CustomerRepository _repository;
 
-        public GetAllCustomersModel(ICustomerRepository customerRepository)
+        public GetAllCustomersModel(CustomerRepository repository)
         {
-            _customerRepository = customerRepository;
+            _repository = repository;
         }
 
         public List<Customer?> Customers { get; set; }
 
         public void OnGet()
         {
-            Customers = _customerRepository.
-
+            Customers = _repository.GetAll();
         }
     }
 }

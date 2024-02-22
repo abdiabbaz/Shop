@@ -1,4 +1,6 @@
-﻿namespace Shop.Services
+﻿using Shop.Models;
+
+namespace Shop.Services
 {
 	public interface ICustomerRepository
 	{
