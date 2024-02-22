@@ -30,7 +30,6 @@ namespace Shop.Services
                     nameSearch.Add(item);
                 }
             }
-
             return nameSearch;
         }
 
@@ -44,7 +43,6 @@ namespace Shop.Services
                     filterList.Add(item);
                 }
             }
-
             return filterList;
         }
 

@@ -10,5 +10,6 @@ namespace Shop.Services
 		List<Item> PriceFilter(int maxPrice, int minPrice = 0);
 		public void UpdateItem(Item item);
         public Item? GetItem(int id);
+
     }
 }
