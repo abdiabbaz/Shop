@@ -11,7 +11,7 @@ namespace Shop.Services
 			_customers = new List<Customer>();
 		}
 
-		public CustomerRepository(bool mockdata = false)
+		public CustomerRepository(bool mockdata = true)
 		{
 			if (mockdata)
 			{
