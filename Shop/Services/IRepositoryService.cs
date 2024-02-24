@@ -5,8 +5,8 @@ namespace Shop.Services
 	public interface IRepositoryService<T> where T : Person
 	{
 		T? UserLoggedIn { get; set; }
-
-		T Add(T item);
+		public int NextId();
+        T Add(T item);
 		bool CheckUser(T User);
 		List<T> GetAll();
 		T GetId(int id);

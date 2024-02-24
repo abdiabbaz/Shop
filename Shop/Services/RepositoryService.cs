@@ -1,4 +1,5 @@
 ﻿using Shop.Models;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Shop.Services
 {
@@ -12,6 +13,12 @@ namespace Shop.Services
 		{
 			_list = new List<T>();
 		}
+
+		public int NextId()
+		{
+			return _list == null || !_list.Any() ? 1 : _list.Max(x => x.Id) + 1;
+		}
+
 
 		public T Add(T item)
 		{
