@@ -36,7 +36,7 @@ namespace Shop.Pages.Users
             var customer = new Customer(Id,Name,Phone,Email,Password,Balance);
             _repository.Add(customer);
 
-            return RedirectToPage("Users/GetAllCustomers");
+            return RedirectToPage("GetAllCustomers");
         }
     }
 }

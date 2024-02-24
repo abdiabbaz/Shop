@@ -3,12 +3,23 @@
 @{
 }
 
+<style>
+    .form-group{
+        width: 200px;
+    }
+
+    .midten{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <body>
 
-    <h2> Opret en profil</h2>
-
+    <h2 style="text-align: center"> Opret en profil</h2>
+    <div class="midten container">
     <form method="post">
-        <div class="form-group">
+            <div class="form-group">
             <label asp-for="Id" class="control-label"></label>
             <input asp-for="Id" class="form-control" />
         </div>
@@ -36,4 +47,5 @@
             <button type="button" class="btn btn-primary">Opret</button>
         </div>
     </form>
+    </div>
 </body>
