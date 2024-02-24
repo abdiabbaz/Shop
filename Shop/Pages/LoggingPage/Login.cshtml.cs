@@ -7,9 +7,9 @@ namespace Shop.Pages.LoggingPage
 {
     public class LoginModel : PageModel
     {
-        private readonly IRepositoryService<Person> _repository;
+        private readonly CustomerRepository _repository;
 
-        public LoginModel(IRepositoryService<Person> service)
+        public LoginModel(CustomerRepository service)
         {
             _repository = service;
         }
@@ -18,7 +18,6 @@ namespace Shop.Pages.LoggingPage
         public string Email { get; set; }
         [BindProperty]
         public string Password { get; set; }    
-        public Customer Customer { get; set; }
 
         public void OnGet()
         {
@@ -27,7 +26,7 @@ namespace Shop.Pages.LoggingPage
         public IActionResult OnPost()
         {
 
-            if (!_repository.CheckUser(Customer))
+            if (!_repository.CheckUser())
             {
                 ModelState.AddModelError(string.Empty, "Wrong Email or Password");
                 return Page();
@@ -38,7 +37,7 @@ namespace Shop.Pages.LoggingPage
                 return Page();
             }
 
-            return RedirectToPage("Index");
+            return RedirectToPage("./Index");
         }
     }
 }
