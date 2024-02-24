@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IItemService, ItemService>();
 builder.Services.AddSingleton<CustomerRepository>();
+builder.Services.AddSingleton<RepositoryService<Admin>>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
