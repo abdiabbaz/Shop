@@ -33,9 +33,8 @@ namespace Shop.Pages.Users
 
         public IActionResult OnPost()
         {
-            var customer = new Customer(Id,Name,Phone,Email,Password,Balance);
+            var customer = new Customer(_repository.NextId(),Name,Email,Password,Phone,Balance);
             _repository.Add(customer);
-
             return RedirectToPage("GetAllCustomers");
         }
     }

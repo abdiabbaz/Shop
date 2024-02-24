@@ -4,11 +4,11 @@
 }
 
 <style>
-    .form-group{
+    .form-group {
         width: 200px;
     }
 
-    .midten{
+    .midten {
         display: flex;
         justify-content: center;
     }
@@ -16,36 +16,36 @@
 
 <body>
 
-    <h2 style="text-align: center"> Opret en profil</h2>
+    <h2 style="text-align: center"> Create your profile!</h2>
     <div class="midten container">
-    <form method="post">
+        <form method="post">
+@*             <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+            </div> *@
             <div class="form-group">
-            <label asp-for="Id" class="control-label"></label>
-            <input asp-for="Id" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Name" class="control-label"></label>
-            <input asp-for="Name" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Email" class="control-label"></label>
-            <input asp-for="Email" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Password" class="control-label"></label>
-            <input asp-for="Password" class="form-control">
-        </div>
-        <div class="form-group">
-            <label asp-for="Phone" class="control-label"></label>
-            <input asp-for="Phone" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Balance" class="control-label"></label>
-            <input asp-for="Balance" class="form-control" />
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary">Opret</button>
-        </div>
-    </form>
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Balance" class="control-label"></label>
+                <input asp-for="Balance" class="form-control" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Opret</button>
+            </div>
+        </form>
     </div>
 </body>
