@@ -23,9 +23,11 @@ namespace Shop.Pages.Users
         [BindProperty]
         public string Email { get; set; }
         [BindProperty]
-        
+
         public string Password { get; set; }
         [BindProperty]
+        [Compare(nameof(Password))]
+
         public string ConfirmPassword { get; set; }
         [BindProperty]
         public string Phone { get; set; }
@@ -43,11 +45,6 @@ namespace Shop.Pages.Users
                 return Page();
             }
 
-            if (Password != ConfirmPassword)
-            {
-                ModelState.AddModelError(ConfirmPassword, "Password is not a match");
-                return Page();
-            }
             var customer = new Customer(_repository.NextId(),Name,Email,Password,Phone,Balance);
             _repository.Add(customer);
             return RedirectToPage("GetAllCustomers");
