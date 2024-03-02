@@ -2,3 +2,13 @@
 @model Shop.Pages.Users.DeleteCustomerModel
 @{
 }
+<tbody>
+    <form method="post">
+        <h2>Er du sikker på, at du vil slette denne kunde?</h2>
+        <div>
+            @Model.Customer.Name
+        </div>
+        <button type="submit">Slet Kunde</button>
+        <a asp-page="/Users/GetAllCustomers">Annuller</a>
+    </form>
+</tbody>

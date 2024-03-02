@@ -46,7 +46,7 @@ namespace Shop.Services
 
         public T Update(T user)
         {
-            var existingUser = GetId(user.id);
+            var existingUser = GetId(user.Id);
 
             if (existingUser != null)
             {
