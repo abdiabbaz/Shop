@@ -20,3 +20,18 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.form-group {
+    width: 200px;
+}
+
+.midten {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}

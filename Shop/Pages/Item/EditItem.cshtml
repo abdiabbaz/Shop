@@ -1,13 +1,13 @@
-﻿@page
+﻿@page "{id:int}"
 @model Shop.Pages.Item.EditItemModel
 @{
 }
 
-<form method="Post">
+<form method="post">
 
     <div class="form-group">
         <label asp-for="Item.Id" class="control-label"></label>
-        <input asp-for="Item.Id" class="form-control"/>
+		<input asp-for="Item.Id" class="form-control" readonly="@(true)"/>
     </div>
 	<div class="form-group">
 		<label asp-for="Item.Name" class="control-label"></label>

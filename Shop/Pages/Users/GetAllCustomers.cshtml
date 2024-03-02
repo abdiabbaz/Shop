@@ -10,12 +10,13 @@
 
 <body>
     <div class="container mt-3" style="display: flex; justify-content: flex-end;">
-        <table class="table table-hover table-striped" style="width: 70px;">
+        <table class="table table-bordered table-hover table-striped" style="width: 70px;">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Phone</th>
                     <th>Balance</th>
                 </tr>
             </thead>
@@ -26,6 +27,7 @@
                         <td>@c.Id</td>
                         <td>@c.Name</td>
                         <td>@c.Email</td>
+                        <td>@c.Phone</td>
                         <td>@c.Balance</td>
                     </tr>
                 }

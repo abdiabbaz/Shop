@@ -1,9 +1,8 @@
-﻿using Shop.Models;
-
-namespace Shop.Services
+﻿namespace Shop.Services
 {
-	public interface ICustomerRepository
-	{
-		void UpdateBalance(int id, double balance);
-	}
+    public interface ICustomerRepository
+    {
+        double Deposit(int customerId, double amount);
+        void UpdateBalance(int id, double balance);
+    }
 }

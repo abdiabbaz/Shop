@@ -63,14 +63,8 @@ namespace Shop.Services
 
         public Item? GetItem(int id)
         {
-            Item exisiting = new Item();
-            _items.Find(x => x.Id == id);
-
-            if (exisiting != null)
-            {
-                return exisiting;
-            }
-            return null;
+            var existingItem = _items.Find(x => x.Id == id);
+            return existingItem != null ? existingItem : null;
         }
     }
 }

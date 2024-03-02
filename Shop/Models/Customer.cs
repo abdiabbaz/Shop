@@ -13,5 +13,11 @@
 		{
 			Balance = balance;
 		}
+
+
+        public void Add(int balance)
+		{
+			Balance = balance;
+		}
 	}
 }

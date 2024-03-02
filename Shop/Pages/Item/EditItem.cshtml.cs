@@ -8,9 +8,11 @@ namespace Shop.Pages.Item
     {
         private readonly IItemService _itemService;
 
+        [BindProperty]
         public Models.Item Item { get; set; }
 
-        public int id { get; set; }
+		[BindProperty]
+		public int id { get; set; }
 
         public EditItemModel(IItemService itemService)
         {
@@ -25,7 +27,11 @@ namespace Shop.Pages.Item
 
         public IActionResult OnPost()
         {
-            _itemService.UpdateItem(Item);
+			//if (!ModelState.IsValid)
+			//{
+			//	return Page();
+			//}
+			_itemService.UpdateItem(Item);
             return RedirectToPage("GetAllItems");
         }
     }

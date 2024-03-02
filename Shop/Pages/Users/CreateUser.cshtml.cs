@@ -44,7 +44,7 @@ namespace Shop.Pages.Users
             {
                 return Page();
             }
-
+           
             var customer = new Customer(_repository.NextId(),Name,Email,Password,Phone,Balance);
             _repository.Add(customer);
             return RedirectToPage("GetAllCustomers");

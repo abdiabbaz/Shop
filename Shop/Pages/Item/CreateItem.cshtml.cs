@@ -6,14 +6,14 @@ namespace Shop.Pages.Item
 {
 	public class CreateItemModel : PageModel
 	{
-		private IItemService _itemService;
+        private IItemService _itemService;
 
-		public CreateItemModel(IItemService itemService)
-		{
-			_itemService = itemService;
-		}
+        public CreateItemModel(IItemService itemService)
+        {
+            _itemService = itemService;
+        }
 
-		[BindProperty]
+        [BindProperty]
 		public Models.Item Item { get; set; }
 
 		public IActionResult OnGet()

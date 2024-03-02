@@ -6,8 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IItemService, ItemService>();
-builder.Services.AddSingleton<CustomerRepository>();
-builder.Services.AddSingleton<RepositoryService<Admin>>();
+builder.Services.AddSingleton<ICustomerRepository,CustomerRepository>();
+builder.Services.AddSingleton<IRepositoryService<Admin>>();
+builder.Services.AddSingleton<IRepositoryService<Customer>>();
+builder.Services.AddSingleton<IRepositoryService<Employee>>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,3 +27,5 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 app.Run();
+
+
